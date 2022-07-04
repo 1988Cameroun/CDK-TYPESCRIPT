@@ -1,19 +1,19 @@
+--- 
+artifacts: 
+  files: 
+    - target/messageUtil-1.0.jar
+phases: 
+  build: 
+    commands: 
+      - "echo Build started on `date`"
+      - "mvn install"
+  install: 
+    commands: 
+      - "echo Nothing to do in the pre_build phase..."
+    pre_build: ~
+    runtime-versions: Standard
+  post_build: 
+    commands: 
+      - "echo Build completed on `date`"
 version: 5.0
 
-phases:
-  install:
-    runtime-versions: Standard
-      java: corretto11
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
-  build:
-    commands:
-      - echo Build started on `date`
-      - mvn install
-  post_build:
-    commands:
-      - echo Build completed on `date`
-artifacts:
-  files:
-    - target/messageUtil-1.0.jar
