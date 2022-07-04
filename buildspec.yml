@@ -1,17 +1,15 @@
-version: 0.2
-phases:
-  install:
-    runtime-versions:
+--- 
+files: 
+  - "**/*"
+phases: 
+  build: 
+    commands: "-echo build started on 'date' - mvn install"
+  install: 
+    commands: 
+      - "echo Nothing to do in the install phase"
+    runtime-versions: 
       java: corretto11
-    commands:
-      - echo Nothing to do in the install phase
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase
-  build:
-    commands:
-      - echo build started on 'date'
-      - mvn install
-      artifacts:
-files:
-- '**/*'
+  pre_build: 
+    commands: 
+      - "echo Nothing to do in the pre_build phase"
+version: 0.2
