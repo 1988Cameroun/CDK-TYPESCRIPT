@@ -1,13 +1,20 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto11
+    commands:
+      - echo Nothing to do in the install phase
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase
   build:
     commands:
-      - java -version
-      - mvn package
-artifacts:
-  files:
-    - '**/*'
+      - echo build started on 'date'
+      - mvn install
+  post_build:
+    commands:
+      - echo build completed on 'date'
+      artifacts:
+files:
+- '**/*'
