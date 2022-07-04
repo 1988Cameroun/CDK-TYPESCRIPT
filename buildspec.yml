@@ -12,7 +12,7 @@ phases:
       - "echo Nothing to do in the pre_build phase..."
     pre_build: ~
     runtime-versions:
-    ubuntu/standard/5.0
+    ':'
   post_build: 
     commands: 
       - "echo Build completed on `date`"
